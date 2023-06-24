@@ -1,0 +1,32 @@
+function[root] = bisection(f, xlow, xup, tol)
+ %no root in the interval
+    if f(xup) * f(xlow) > 0
+        disp('No Roots in the given interval! Please check!');
+        root = Inf;
+        iter = 0;
+        err = Inf;
+
+
+    end
+
+    iter = 1;
+    root = (xup + xlow) / 2;
+    f_low = f(xlow);
+    f_up = f(xup);
+    f_root = f(root);
+    
+    While(i) %1 means true, the loop will run infinitly 
+        iter = iter + 1
+        root_prev = root;
+        
+        if f_low * f_root < 0
+            xup = root;
+        elseif 
+            f_up * f root < 0
+            xlow = root;
+        elseif f_up * f_root == 0
+            root = xup;
+        elseif f_low * f_root == 0
+            root = xlow;
+        end
+
